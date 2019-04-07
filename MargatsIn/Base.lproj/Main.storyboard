@@ -79,11 +79,74 @@
                         <outlet property="password" destination="ORa-7e-fu3" id="MG8-ed-ZRy"/>
                         <outlet property="signupOrLoginButton" destination="hKS-o4-Mrw" id="oC3-OE-Zeh"/>
                         <outlet property="switchLoginModeButton" destination="1Pv-fm-zVi" id="wrj-pZ-Nrc"/>
+                        <segue destination="7aF-yt-NiR" kind="show" identifier="showUserTable" id="GZJ-7I-3yf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="BTn-mB-zEY">
+            <objects>
+                <tableViewController id="tOq-hj-48a" customClass="UserTableViewController" customModule="MargatsIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MLl-XF-5Fd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="XI1-zD-ldo">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XI1-zD-ldo" id="szt-aC-Znb">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tOq-hj-48a" id="F1x-AF-5BB"/>
+                            <outlet property="delegate" destination="tOq-hj-48a" id="I3c-DW-lvp"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Users" id="aaU-vA-FJ9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZLl-vD-ZW6">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MSr-Ld-iRH">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutUser:" destination="tOq-hj-48a" eventType="touchUpInside" id="d5q-Zv-sjy"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="logoutUser:" destination="tOq-hj-48a" id="6r5-Mu-4rI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logoutSegue" id="DQz-tx-0iJ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTL-0Z-z4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1587" y="90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zGU-6c-OV8">
+            <objects>
+                <navigationController id="7aF-yt-NiR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="de7-ES-mxG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tOq-hj-48a" kind="relationship" relationship="rootViewController" id="XRd-tG-Fvy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q18-1U-Aos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="90"/>
         </scene>
     </scenes>
 </document>
