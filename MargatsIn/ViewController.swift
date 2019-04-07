@@ -10,10 +10,29 @@ import UIKit
 import Parse
 
 class ViewController: UIViewController {
-
+    
+    var signupModeActive = true
+    
+    @IBOutlet weak var email: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBAction func signupOrLogin(_ sender: Any) {
+    }
+    @IBOutlet weak var signupOrLoginButton: UIButton!
+    @IBAction func switchLoginMode(_ sender: Any) {
+    }
+    @IBAction func switchLoginModeButton(_ sender: Any) {
+    }
+    @IBOutlet weak var switchLoginModeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
+        
+        
+        
+        
         
         /* Lecture 111-112
         // Sample code from Parse Server document
@@ -47,6 +66,7 @@ class ViewController: UIViewController {
         }
         */
         
+        /* Lecture 115
         // Fetch the data and update comment
         let query = PFQuery(className: "Comment")
         query.getObjectInBackground(withId: "qHpAwR137o") { (object, error) in
@@ -64,6 +84,7 @@ class ViewController: UIViewController {
                 print("failed to fetch the data")
             }
         }
+        */
     }
 }
 
