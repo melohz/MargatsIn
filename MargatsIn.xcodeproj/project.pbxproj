@@ -14,6 +14,7 @@
 		5C821669225705BE00F54143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C821667225705BE00F54143 /* LaunchScreen.storyboard */; };
 		5C821674225705BE00F54143 /* MargatsInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C821673225705BE00F54143 /* MargatsInTests.swift */; };
 		5C82167F225705BE00F54143 /* MargatsInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82167E225705BE00F54143 /* MargatsInUITests.swift */; };
+		D84D3E0302666ABC0A801096 /* Pods_MargatsIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4F512AC4A04C0A3AE0EB30 /* Pods_MargatsIn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F4F512AC4A04C0A3AE0EB30 /* Pods_MargatsIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MargatsIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C82165B225705BC00F54143 /* MargatsIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MargatsIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C82165E225705BC00F54143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C821660225705BC00F54143 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		5C82167A225705BE00F54143 /* MargatsInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MargatsInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C82167E225705BE00F54143 /* MargatsInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MargatsInUITests.swift; sourceTree = "<group>"; };
 		5C821680225705BE00F54143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882B22345E491B437A853731 /* Pods-MargatsIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MargatsIn.release.xcconfig"; path = "Target Support Files/Pods-MargatsIn/Pods-MargatsIn.release.xcconfig"; sourceTree = "<group>"; };
+		AEEB15BD4C9C5E95E21F9687 /* Pods-MargatsIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MargatsIn.debug.xcconfig"; path = "Target Support Files/Pods-MargatsIn/Pods-MargatsIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84D3E0302666ABC0A801096 /* Pods_MargatsIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				5C821672225705BE00F54143 /* MargatsInTests */,
 				5C82167D225705BE00F54143 /* MargatsInUITests */,
 				5C82165C225705BC00F54143 /* Products */,
+				774E43EB382E0E1C66F277AC /* Pods */,
+				EBEEFBB72CBA62E3B4E8D99E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,24 @@
 			path = MargatsInUITests;
 			sourceTree = "<group>";
 		};
+		774E43EB382E0E1C66F277AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEEB15BD4C9C5E95E21F9687 /* Pods-MargatsIn.debug.xcconfig */,
+				882B22345E491B437A853731 /* Pods-MargatsIn.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EBEEFBB72CBA62E3B4E8D99E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F4F512AC4A04C0A3AE0EB30 /* Pods_MargatsIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C821683225705BE00F54143 /* Build configuration list for PBXNativeTarget "MargatsIn" */;
 			buildPhases = (
+				EECD2B1DB9BA8C041AEA1E13 /* [CP] Check Pods Manifest.lock */,
 				5C821657225705BC00F54143 /* Sources */,
 				5C821658225705BC00F54143 /* Frameworks */,
 				5C821659225705BC00F54143 /* Resources */,
+				F7561B6C9AD51558D18BE2EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EECD2B1DB9BA8C041AEA1E13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MargatsIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7561B6C9AD51558D18BE2EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MargatsIn/Pods-MargatsIn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MargatsIn/Pods-MargatsIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C821657225705BC00F54143 /* Sources */ = {
@@ -430,6 +506,7 @@
 		};
 		5C821684225705BE00F54143 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEEB15BD4C9C5E95E21F9687 /* Pods-MargatsIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +525,7 @@
 		};
 		5C821685225705BE00F54143 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 882B22345E491B437A853731 /* Pods-MargatsIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
