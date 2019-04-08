@@ -16,6 +16,9 @@
 		5C82167F225705BE00F54143 /* MargatsInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C82167E225705BE00F54143 /* MargatsInUITests.swift */; };
 		5CFF4F89225AAFA600BCA56A /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF4F88225AAFA600BCA56A /* UserTableViewController.swift */; };
 		5CFF4F8B225AC8CD00BCA56A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF4F8A225AC8CD00BCA56A /* PostViewController.swift */; };
+		5CFF4F8D225B7EE500BCA56A /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF4F8C225B7EE500BCA56A /* FeedTableViewController.swift */; };
+		5CFF4F8F225B80ED00BCA56A /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF4F8E225B80ED00BCA56A /* FeedTableViewCell.swift */; };
+		5CFF4F91225B83EE00BCA56A /* Edmund_blair_leighton_accolade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CFF4F90225B83EE00BCA56A /* Edmund_blair_leighton_accolade.jpg */; };
 		D84D3E0302666ABC0A801096 /* Pods_MargatsIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4F512AC4A04C0A3AE0EB30 /* Pods_MargatsIn.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		5C821680225705BE00F54143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CFF4F88225AAFA600BCA56A /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserTableViewController.swift; path = /Users/itagakitomoya/Documents/SelfStudy/Xcode/MargatsIn/MargatsIn/UserTableViewController.swift; sourceTree = "<absolute>"; };
 		5CFF4F8A225AC8CD00BCA56A /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		5CFF4F8C225B7EE500BCA56A /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		5CFF4F8E225B80ED00BCA56A /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		5CFF4F90225B83EE00BCA56A /* Edmund_blair_leighton_accolade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Edmund_blair_leighton_accolade.jpg; sourceTree = "<group>"; };
 		882B22345E491B437A853731 /* Pods-MargatsIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MargatsIn.release.xcconfig"; path = "Target Support Files/Pods-MargatsIn/Pods-MargatsIn.release.xcconfig"; sourceTree = "<group>"; };
 		AEEB15BD4C9C5E95E21F9687 /* Pods-MargatsIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MargatsIn.debug.xcconfig"; path = "Target Support Files/Pods-MargatsIn/Pods-MargatsIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +117,9 @@
 				5C82165E225705BC00F54143 /* AppDelegate.swift */,
 				5C821660225705BC00F54143 /* ViewController.swift */,
 				5C821662225705BC00F54143 /* Main.storyboard */,
+				5CFF4F8E225B80ED00BCA56A /* FeedTableViewCell.swift */,
+				5CFF4F8C225B7EE500BCA56A /* FeedTableViewController.swift */,
+				5CFF4F90225B83EE00BCA56A /* Edmund_blair_leighton_accolade.jpg */,
 				5CFF4F8A225AC8CD00BCA56A /* PostViewController.swift */,
 				5CFF4F88225AAFA600BCA56A /* UserTableViewController.swift */,
 				5C821665225705BE00F54143 /* Assets.xcassets */,
@@ -264,6 +273,7 @@
 				5C821669225705BE00F54143 /* LaunchScreen.storyboard in Resources */,
 				5C821666225705BE00F54143 /* Assets.xcassets in Resources */,
 				5C821664225705BC00F54143 /* Main.storyboard in Resources */,
+				5CFF4F91225B83EE00BCA56A /* Edmund_blair_leighton_accolade.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CFF4F8B225AC8CD00BCA56A /* PostViewController.swift in Sources */,
+				5CFF4F8F225B80ED00BCA56A /* FeedTableViewCell.swift in Sources */,
 				5C821661225705BC00F54143 /* ViewController.swift in Sources */,
+				5CFF4F8D225B7EE500BCA56A /* FeedTableViewController.swift in Sources */,
 				5CFF4F89225AAFA600BCA56A /* UserTableViewController.swift in Sources */,
 				5C82165F225705BC00F54143 /* AppDelegate.swift in Sources */,
 			);
