@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PostViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -33,8 +34,62 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func postImage(_ sender: Any) {
+    func displayAlert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func postImage(_ sender: Any) {
+        if let image = imageToPost.image {
+            let post = PFObject(className: "Post")
+            
+            post["message"] = comment.text
+            post["userid"] = PFUser.current()?.objectId
+            
+            if let imageData = image.pngData() {
+                
+                // Create Spinner
+                
+                let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+                
+                activityIndicator.center = self.view.center
+                
+                activityIndicator.hidesWhenStopped = true
+                
+                activityIndicator.style = UIActivityIndicatorView.Style.gray
+                
+                // Add indicator to view
+                view.addSubview(activityIndicator)
+                
+                activityIndicator.startAnimating()
+                
+                // User cannot press the button
+                UIApplication.shared.beginIgnoringInteractionEvents()
+                
+                // Post Image
+                let imageFile = PFFileObject(name: "image.png", data: imageData)
+                post["imageFile"] = imageFile
+                
+                post.saveInBackground(block: { (success, error) in
+                    
+                    activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                    
+                    if (success) {
+                        self.displayAlert(title: "Image Posted!", message: "Your image has been posted successfully")
+                        self.comment.text = ""
+                        self.imageToPost.image = nil
+                        } else {
+                            self.displayAlert(title: "Image Could Not Be Posted", message: "Please try again later")
+                        }
+                })
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

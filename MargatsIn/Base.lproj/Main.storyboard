@@ -167,8 +167,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose an image..."/>
                                 <connections>
-                                    <action selector="chooseImage:" destination="ZnF-mz-gIs" eventType="touchUpInside" id="YoW-FA-47M"/>
-                                    <action selector="postImage:" destination="ZnF-mz-gIs" eventType="touchUpInside" id="2p6-pt-46w"/>
+                                    <action selector="chooseImage:" destination="ZnF-mz-gIs" eventType="touchUpInside" id="uU9-SR-lhT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0M-nV-Amw">
