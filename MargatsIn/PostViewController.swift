@@ -13,7 +13,26 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var imageToPost: UIImageView!
     @IBOutlet weak var comment: UITextField!
     @IBAction func chooseImage(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
+        
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        imagePicker.allowsEditing = false
+        
+        self.present(imagePicker, animated: true, completion: nil)
+        
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            //info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage {
+            imageToPost.image = image
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func postImage(_ sender: Any) {
     }
     override func viewDidLoad() {
